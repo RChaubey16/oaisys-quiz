@@ -1,3 +1,5 @@
+
+
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Game from './pages/Game';
 import Leaderboard from './pages/Leaderboard';
