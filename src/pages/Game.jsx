@@ -288,21 +288,15 @@ const Game = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {['A', 'B', 'C', 'D'].map((letter, index) => {
-                  const isCorrectAnswer = currentQuestion.options[index] === currentQuestion.correct;
-                  const showFeedback = feedback && isCorrectAnswer;
+                  // const isCorrectAnswer = currentQuestion.options[index] === currentQuestion.correct;
+                  // const showFeedback = feedback && isCorrectAnswer;
                   
                   return (
                     <button
                       key={letter}
                       onClick={() => handleAnswer(currentQuestion.options[index])}
                       disabled={!!feedback}
-                      className={`py-5 px-6 rounded-2xl font-medium text-lg text-left transition-all transform hover:scale-[1.02] disabled:cursor-not-allowed ${
-                        showFeedback && feedback === 'correct'
-                          ? 'bg-linear-to-r from-green-500 to-emerald-500 text-white shadow-lg scale-[1.02]'
-                          : showFeedback && feedback === 'wrong'
-                          ? 'bg-linear-to-r from-green-500 to-emerald-500 text-white shadow-lg'
-                          : 'bg-slate-50 hover:bg-slate-100 text-slate-700 shadow-md hover:shadow-lg'
-                      }`}
+                      className={`py-5 px-6 rounded-2xl font-medium text-lg text-left transition-all transform hover:scale-[1.02] disabled:cursor-not-allowed`}
                     >
                       <span className="inline-block w-8 h-8 bg-white/20 rounded-lg text-center leading-8 mr-3 font-bold">
                         {letter}
