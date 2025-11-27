@@ -1,0 +1,25 @@
+Logo url,option A,option B,option C,option D,correct_answer
+https://avatars.githubusercontent.com/openai?s=200,OpenAI,Anthropic,Mistral,Cohere,A
+https://avatars.githubusercontent.com/huggingface?s=200,Hugging Face,Weights & Biases,Cohere,Runway,A
+https://avatars.githubusercontent.com/mistralai?s=200,Mistral AI,OpenAI,Anthropic,Cohere,A
+https://avatars.githubusercontent.com/Stability-AI?s=200,Stability AI,Midjourney,Runway,OpenAI,A
+https://avatars.githubusercontent.com/midjourney?s=200,Midjourney,Stable Diffusion,DALL·E,Runway,A
+https://avatars.githubusercontent.com/mosaicml?s=200,MosaicML,Mistral,OpenAI,Anthropic,A
+https://avatars.githubusercontent.com/eleutherai?s=200,EleutherAI,OpenAI,Anthropic,Cohere,A
+https://avatars.githubusercontent.com/graphcore?s=200,Graphcore,Cerebras,SambaNova,Intel,A
+https://avatars.githubusercontent.com/wandb?s=200,Weights & Biases,Neptune,MLflow,ClearML,A 
+https://avatars.githubusercontent.com/iterative?s=200,DVC,Pachyderm,MLflow,Git LFS,A
+https://avatars.githubusercontent.com/pachyderm?s=200,Pachyderm,DVC,Dagster,MLflow,A
+https://avatars.githubusercontent.com/ray-project?s=200,Ray,Dask,Prefect,Airflow,A
+https://avatars.githubusercontent.com/dask?s=200,Dask,Ray,Spark,Flink,A
+https://avatars.githubusercontent.com/PrefectHQ?s=200,Prefect,Airflow,Dagster,Kubeflow,A
+https://avatars.githubusercontent.com/dagster-io?s=200,Dagster,Airflow,Prefect,Kubeflow,A
+https://avatars.githubusercontent.com/bentoml?s=200,BentoML,Baseten,Seldon,KServe,A
+https://avatars.githubusercontent.com/baseten?s=200,BaseTen,BentoML,Seldon,Modal,A
+https://avatars.githubusercontent.com/SeldonIO?s=200,Seldon,BentoML,KServe,KFServing,A
+https://avatars.githubusercontent.com/replicate?s=200,Replicate,Runpod,Modal,Paperspace,A
+https://avatars.githubusercontent.com/runpod?s=200,Runpod,Paperspace,Replicate,Modal,A
+https://avatars.githubusercontent.com/paperspace?s=200,Paperspace,Runpod,Gradient,Colab,A
+https://avatars.githubusercontent.com/deepnote?s=200,Deepnote,Colab,Paperspace,Kaggle,A
+https://avatars.githubusercontent.com/bentoml?s=200,BaseTen (alt),BentoML,Seldon,Modal,A
+https://avatars.githubusercontent.com/anyscale?s=200,Anyscale,Ray,Dask,Prefect,A 
