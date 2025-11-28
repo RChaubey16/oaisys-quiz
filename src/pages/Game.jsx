@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { Clock, Zap, Play } from "lucide-react";
-import csvData from "../assets/csv/hard-ai-tools.csv?raw";
+// import csvData from "../assets/csv/hard-ai-tools.csv?raw";
+import csvData from "../assets/csv/hard-ai-tools_new.csv?raw";
 import { savePlayer } from "../../utils/db_utils";
 
 // Parse CSV data and create techLogos array
