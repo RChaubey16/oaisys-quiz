@@ -158,7 +158,7 @@ const Leaderboard = () => {
                         </span>
                       </div>
 
-                      <span className="text-sm text-slate-500 mt-[-2px]">
+                      <span className={`text-sm text-slate-500 mt-[-2px] ${ isCurrentPlayer ? "text-white" : ""}`}>
                         {player.email}
                       </span>
                     </div>

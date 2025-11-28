@@ -262,13 +262,13 @@ const Game = () => {
           {/* Stats */}
           <div className="flex justify-between items-center mb-4">
             <div className="flex gap-4">
-              <div className="bg-white/95 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-lg border border-white/20">
+              <div className="bg-white/95 backdrop-blur-xl px-3 py-3 rounded-2xl shadow-lg border border-white/20">
                 <div className="text-xs text-slate-500 mb-1">Score</div>
                 <div className="text-2xl font-bold bg-linear-to-r from-[#CC1111] to-[#E62222] bg-clip-text text-transparent">
                   {score}
                 </div>
               </div>
-              <div className="bg-white/95 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-lg border border-white/20">
+              <div className="bg-white/95 backdrop-blur-xl px-3 py-3 rounded-2xl shadow-lg border border-white/20">
                 <div className="text-xs text-slate-500 mb-1">Questions</div>
                 <div className="text-2xl font-bold text-slate-700">
                   {answeredCount}
