@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { Clock, Zap, Play } from "lucide-react";
 // import csvData from "../assets/csv/hard-ai-tools.csv?raw";
-import csvData from "../assets/csv/hard-ai-tools_new.csv?raw";
+import csvData from "../assets/csv/shuffled_answers.csv?raw";
 import { savePlayer } from "../../utils/db_utils";
 
 // Parse CSV data and create techLogos array
@@ -56,9 +56,7 @@ const shuffleArray = (array) => {
   return newArray;
 };
 
-const getNewQuestion = (allLogos) => {
-  const correct = allLogos[Math.floor(Math.random() * allLogos.length)];
-
+const prepareQuestion = (correct, allLogos) => {
   // If the logo has predefined options (from CSV), use them
   if (correct.options && correct.options.length === 4) {
     return {
@@ -91,7 +89,7 @@ const Game = () => {
   const [gameActive, setGameActive] = useState(false);
   const [answeredCount, setAnsweredCount] = useState(0);
   const [feedback, setFeedback] = useState(null);
-  const [selected, setSelected] = useState(null);
+  const [questionQueue, setQuestionQueue] = useState([]);
 
   const endGame = useCallback(async () => {
     setGameActive(false);
@@ -128,8 +126,19 @@ const Game = () => {
     }
   }, [timeLeft, gameActive, endGame]);
 
-  const generateQuestion = () => {
-    setCurrentQuestion(getNewQuestion(techLogos));
+  const generateQuestion = (queue) => {
+    const currentQueue = queue || questionQueue;
+
+    if (currentQueue.length === 0) {
+      endGame();
+      return;
+    }
+
+    const nextLogo = currentQueue[0];
+    const remaining = currentQueue.slice(1);
+
+    setQuestionQueue(remaining);
+    setCurrentQuestion(prepareQuestion(nextLogo, techLogos));
     setFeedback(null);
   };
 
@@ -141,7 +150,9 @@ const Game = () => {
       setAnsweredCount(0);
       setTimeLeft(30);
       setGameActive(true);
-      generateQuestion();
+      
+      const shuffled = shuffleArray([...techLogos]);
+      generateQuestion(shuffled);
     }
   };
 
@@ -320,14 +331,13 @@ const Game = () => {
                   <button
                     key={letter}
                     onClick={() => {
-                      setSelected(index);
                       handleAnswer(currentQuestion.options[index]);
                     }}
                     disabled={!!feedback}
                     className={`
                     py-5 px-6 rounded-2xl font-medium text-lg text-left transition-all transform
                     hover:scale-[1.02] disabled:cursor-not-allowed border border-gray-500 cursor-pointer
-                    ${selected === index ? "bg-gray-200" : ""}
+                    focus:bg-gray-200
                   `}
                   >
                     <span className="inline-block w-8 h-8 bg-white/20 rounded-lg text-center leading-8 mr-3 font-bold">

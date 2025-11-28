@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Zap, Sparkles, Play } from 'lucide-react';
-import csvData from '../assets/csv/hard-ai-tools_new.csv?raw';
+import csvData from "../assets/csv/shuffled_answers.csv?raw";
 
 // Parse CSV data and create techLogos array
 const parseCsvData = (csv) => {
