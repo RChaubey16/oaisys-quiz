@@ -296,7 +296,7 @@ const Game = () => {
                       key={letter}
                       onClick={() => handleAnswer(currentQuestion.options[index])}
                       disabled={!!feedback}
-                      className={`py-5 px-6 rounded-2xl font-medium text-lg text-left transition-all transform hover:scale-[1.02] disabled:cursor-not-allowed`}
+                      className={`py-5 px-6 rounded-2xl font-medium text-lg text-left transition-all transform hover:scale-[1.02] disabled:cursor-not-allowed border border-gray-500`}
                     >
                       <span className="inline-block w-8 h-8 bg-white/20 rounded-lg text-center leading-8 mr-3 font-bold">
                         {letter}
