@@ -260,7 +260,7 @@ const Game = () => {
           </div>
 
           {/* Stats */}
-          <div className="flex justify-between items-center mb-8">
+          <div className="flex justify-between items-center mb-4">
             <div className="flex gap-4">
               <div className="bg-white/95 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-lg border border-white/20">
                 <div className="text-xs text-slate-500 mb-1">Score</div>
@@ -300,12 +300,12 @@ const Game = () => {
 
           {/* Question card */}
           {currentQuestion && (
-            <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl p-10 border border-white/20">
+            <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl p-4 xl:p-10 border border-white/20">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-bold text-slate-800 mb-8">
+                <h2 className="text-3xl font-bold text-slate-800 mb-2">
                   What is this logo?
                 </h2>
-                <div className="inline-flex items-center justify-center w-40 h-40 rounded-3xl text-7xl shadow-2xl transform hover:scale-105 transition-transform">
+                <div className="inline-flex items-center justify-center w-30 h-30 rounded-3xl text-7xl shadow-2xl transform hover:scale-105 transition-transform">
                   <img
                     src={currentQuestion.logo.icon}
                     alt={currentQuestion.logo.name}
